@@ -30,5 +30,5 @@ class Word extends Model
 	 */
 	private $gifs;
 
-	private $fillable = ['term', 'definition', 'letters', 'gifs'];
+	protected $fillable = ['term', 'definition', 'letters', 'gifs'];
 }
