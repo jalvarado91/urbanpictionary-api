@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Word;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -15,7 +16,7 @@ class WordController extends Controller
      */
     public function index()
     {
-        return "hello";
+        return Word::all()->random(10)->get();
     }
 
     /**
