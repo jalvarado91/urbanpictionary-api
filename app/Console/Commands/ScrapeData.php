@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use GuzzleHttp\Client;
 use Illuminate\Console\Command;
 
 class ScrapeData extends Command
@@ -35,8 +36,9 @@ class ScrapeData extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public function handle(Client $client)
     {
-        $this->info("Hello");
+//        $client->get()
+//        $this->info("Hello");
     }
 }
