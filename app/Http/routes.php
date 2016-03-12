@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test', function() {
+    $client = new \GuzzleHttp\Client();
+    $resp = $client->get('http://www.urbandictionary.com/popular.php?character=A');
+    $html = $resp->getBody()->getContents();
+    dd($html);
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
