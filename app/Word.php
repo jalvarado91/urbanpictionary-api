@@ -10,72 +10,25 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Word extends Model
 {
+	/**
+	 * @var string
+	 */
 	private $term;
+
+	/**
+	 * @var string
+	 */
 	private $definition;
+
+	/**
+	 * @var string
+	 */
 	private $letters;
+
+	/**
+	 * @var string
+	 */
 	private $gifs;
 
-	/**
-	 * @return string
-	 */
-	public function getTerm()
-	{
-		return $this->term;
-	}
-
-	/**
-	 * @param string $term
-	 */
-	public function setTerm($term)
-	{
-		$this->term = $term;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getDefinition()
-	{
-		return $this->definition;
-	}
-
-	/**
-	 * @param string $definition
-	 */
-	public function setDefinition($definition)
-	{
-		$this->definition = $definition;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getLetters()
-	{
-		return $this->letters;
-	}
-
-	/**
-	 * @param string $letters
-	 */
-	public function setLetters($letters)
-	{
-		$this->letters = $letters;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getGifs()
-	{
-		return $this->gifs;
-	}
-
-	/**
-	 * @param string $gifs
-	 */
-	public function setGifs($gifs)
-	{
-		$this->gifs = $gifs;
-	}
+	private $fillable = ['term', 'definition', 'letters', 'gifs'];
 }
