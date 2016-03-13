@@ -9,6 +9,9 @@ use App\Http\Requests;
 
 class WordController extends Controller
 {
+    public __construct() {
+    
+    }
     /**
      * Display a listing of the resource.
      *
