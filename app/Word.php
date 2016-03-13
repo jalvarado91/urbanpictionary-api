@@ -10,25 +10,21 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Word extends Model
 {
-	/**
-	 * @var string
-	 */
-	private $term;
+	protected $fillable = ['term', 'definition', 'letters', 'gifs'];
 
-	/**
-	 * @var string
-	 */
-	private $definition;
+	public function getLettersAttribute($value) {
+		return unserialize($value);
+	}
 
-	/**
-	 * @var string
-	 */
-	private $letters;
+	public function setLettersAttribute($value) {
+		$this->attributes['letters'] = serialize($value);
+	}
 
-	/**
-	 * @var string
-	 */
-	private $gifs;
+	public function getGifsAttribute($value) {
+		return unserialize($value);
+	}
 
-	private $fillable = ['term', 'definition', 'letters', 'gifs'];
+	public function setGifsAttribute($value) {
+		$this->attributes['gifs'] = serialize($value);
+	}
 }

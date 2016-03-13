@@ -15,9 +15,9 @@ class CreatWordsTable extends Migration
 		Schema::create('words', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('term');
-			$table->string('definition');
-			$table->string('letters');
-			$table->string('gifs');
+			$table->text('definition');
+			$table->text('letters');
+			$table->text('gifs');
 			$table->timestamps();
 		});
 	}

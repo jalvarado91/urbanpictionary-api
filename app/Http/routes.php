@@ -11,13 +11,14 @@
 |
 */
 
+use App\Word;
+use GuzzleHttp\Client;
+use Symfony\Component\DomCrawler\Crawler;
+
 Route::get('/', "WordController@index");
 
 Route::get('/test', function() {
-    $client = new \GuzzleHttp\Client();
-    $resp = $client->get('http://www.urbandictionary.com/popular.php?character=A');
-    $html = $resp->getBody()->getContents();
-    dd($html);
+    return Word::all();
 });
 
 /*

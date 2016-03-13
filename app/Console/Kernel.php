@@ -14,7 +14,10 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         // Commands\Inspire::class,
-        Commands\ScrapeData::class
+        Commands\ScrapeData::class,
+        Commands\ScrapeDefinitions::class,
+        Commands\MakeLetters::class,
+        Commands\GetGifs::class
     ];
 
     /**
