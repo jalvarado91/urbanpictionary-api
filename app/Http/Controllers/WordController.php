@@ -9,8 +9,8 @@ use App\Http\Requests;
 
 class WordController extends Controller
 {
-    public __construct() {
-    
+    public function __construct() {
+        $this->middleware('cors');
     }
     /**
      * Display a listing of the resource.
